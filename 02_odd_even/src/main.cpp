@@ -50,10 +50,10 @@ int main(int argc, char *argv[])
 	//std::cout << argumentAsString << std::endl; // i think this should be removed
 
 	// --------------- stop
-	
+
 	try
 	{
-		number = std::atoi(argumentAsCharArray);
+		number = std::stoi(argumentAsCharArray);
 		printOddOrEven(number);
 	}
 	catch (std::exception exception)
