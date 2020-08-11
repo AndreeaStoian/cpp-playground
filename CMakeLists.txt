@@ -35,3 +35,9 @@ IF (BUILD_SAMPLES_15_19)
     ADD_SUBDIRECTORY(15_game_of_life)
 ENDIF ()
 
+IF (BUILD_SAMPLES_EXTERNAL_DEPS)
+    ADD_SUBDIRECTORY(20_sfml_lib_sample)
+ENDIF()
+
+ADD_SUBDIRECTORY(21_sample_feline)
+ADD_SUBDIRECTORY(22_sample_kitty_exe)
