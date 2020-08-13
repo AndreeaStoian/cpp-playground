@@ -21,5 +21,5 @@ public:
 	//operator int() const;
 	virtual std::string get_description();
 
-	virtual void make_sound();
+	virtual void speak();
 };
