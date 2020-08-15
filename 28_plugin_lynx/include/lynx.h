@@ -5,7 +5,7 @@
 //
 
 // 1. Platform specific definitions and overall build options for the library.
-#include "build_opts_lion.h"
+#include "build_opts_lynx.h"
 
 // 2. C system headers, in alphabetical order.
 // none
@@ -19,15 +19,15 @@
 // 5. Other libraries' headers, in alphabetical order.
 // none
 
-class LION_IMPEXP Lion : public Feline
+class LYNX_IMPEXP Lynx : public Feline
 {
 private:
 	std::string name_;
 	std::string subspecies_;
 
 public:
-	Lion(const std::string& name, const std::string& subspecies);
-	virtual ~Lion();
+	Lynx(const std::string& name, const std::string& subspecies);
+	virtual ~Lynx();
 	virtual void speak();
 
 	virtual const std::string& get_subspecies() const
@@ -41,3 +41,9 @@ public:
 
 	static Feline* create(const std::string& name, const std::string& subspecies);
 };
+
+// Due to name mangling, export a simple C interface for the creation function.
+extern "C"
+{
+	LYNX_IMPEXP Feline* createFeline(const std::string& name, const std::string& subspecies);
+}

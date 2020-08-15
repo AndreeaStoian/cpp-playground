@@ -46,3 +46,13 @@ void Lion::speak()
 	std::cout << "Roar";
 	std::cout << "!" << std::endl;
 }
+
+Feline* createFeline(const std::string& name, const std::string& subspecies)
+{
+	return Lion::create(name, subspecies);
+}
+
+Feline* createFelineExt(const char* name, const char* subspecies)
+{
+	return Lion::create(name, subspecies);
+}

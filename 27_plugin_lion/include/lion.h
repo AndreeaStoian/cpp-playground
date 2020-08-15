@@ -41,3 +41,8 @@ public:
 
 	static Feline* create(const std::string& name, const std::string& subspecies);
 };
+
+extern "C"
+{
+	LION_IMPEXP Feline* createFeline(const std::string& name, const std::string& subspecies);
+}

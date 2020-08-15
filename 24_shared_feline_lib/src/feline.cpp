@@ -19,6 +19,7 @@
 // none
 
 Feline::Feline(const std::string& species)
+	: species_(species)
 {
 }
 
@@ -27,4 +28,9 @@ Feline::~Feline()
 #ifdef CTOR_DTOR_MSG
 	std::cout << "Feline (unknwon) destroyed." << std::endl;
 #endif //CTOR_DTOR_MSG
+}
+
+std::string getFelineLibVersion()
+{
+	return "1.0";
 }
